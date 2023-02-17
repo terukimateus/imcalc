@@ -1,16 +1,16 @@
-const peso = document.querySelector('#peso')
-const altura = document.querySelector('#altura')
+const peso = document.querySelector('#peso') // constante para pegar o valor do PESO
+const altura = document.querySelector('#altura')   // constante para pegar o valor da altura
 const resultado = document.querySelector('#resultado')
-const nome = document.querySelector('#nome')
+const nome = document.querySelector('#nome') // constante para pegar o valor do nome
 
 
 const calcular = () => {
 
 
-    if (altura.value !== '' && peso.value !== '') {
+    if (altura.value !== '' && peso.value !== '') { // se a altura for diferente de nulo e o peso diferente de  nulo =
 
 
-    const imc = (peso.value / (altura.value * altura.value)).toFixed(2)
+    const imc = (peso.value / (altura.value * altura.value)).toFixed(2) // a constate imc recebe peso dividido pela altura ao quadrado // toFixed é para limitar os fracionais
     let classification = ''
 
     if (imc<=18) { // se o IMC for menor que 18
@@ -28,6 +28,6 @@ const calcular = () => {
         classification = 'com obesidade Classe 3'
     }
 
-    resultado.innerHTML= nome.value + `, seu IMC é: ${imc}, você está ${classification}!` 
+    resultado.innerHTML= nome.value + `, seu IMC é: ${imc}, você está ${classification}!`  // Mensagem que ira passar ao clicar em calcular
     }
 }
